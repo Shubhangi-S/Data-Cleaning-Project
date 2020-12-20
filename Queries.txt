@@ -1,0 +1,17 @@
+Schema Creation
+1. DROP TABLE IF EXISTS `clean`; CREATE TABLE `clean` (`ID` mediumint(9), `Application` varchar(194) DEFAULT NULL, `Category` varchar(19) DEFAULT NULL,  `Rating` varchar(3) DEFAULT NULL, `Reviews` int(11) DEFAULT NULL,`Size` varchar(18) DEFAULT NULL,`Downloads` bigint(20) DEFAULT NULL,`Type` varchar(4) DEFAULT NULL,`Price` varchar(8) DEFAULT NULL,`Content Rating` varchar(15) DEFAULT NULL,`Genres` varchar(37) DEFAULT NULL,`Last Updated` date(8) DEFAULT NULL,`Current Version` varchar(50) DEFAULT NULL, `Android Version` varchar(18) DEFAULT NULL) ;
+2. INSERT INTO `clean` (`ID`,`Application`,`Category`,`Rating`,`Reviews`,`Size`,`Downloads`,`Type`,`Price`,`Content Rating`,`Genres`,`Last Updated`,`Current Version`,`Android Version`) VALUES ('0','Photo editor & candy camera & grid & scrapbook','ART_AND_DESIGN','4.1','159','19','10000','Free','0','Everyone','Art & Design','2018-01-07','1.0.0','4.0.3 and up');
+3. SELECT * FROM clean;
+Data Profiling
+4. SELECT * FROM clean WHERE category = "GAME" AND rating >4.0;
+5. SELECT * FROM clean WHERE type = "Free";
+6. SELECT * FROM clean WHERE size>10;
+7. SELECT * FROM clean WHERE application LIKE 's%';
+8. SELECT COUNT(*) FROM clean WHERE rating = "NaN";
+9. SELECT COUNT(*) FROM clean WHERE rating = "" OR content rating = "" OR genres = "" OR current_version = "" OR android_version = "";
+Integrity Constraints
+10. SELECT * from clean WHERE Rating  NOT BETWEEN 0 AND 5;
+11. SELECT a.*  FROM clean a JOIN (SELECT *, COUNT(*) FROM clean b GROUP BY ID HAVING count(*) > 1 ) b ON a.ID = b.ID ORDER BY a.ID;
+12. SELECT * FROM clean WHERE Price < 0;
+13. SELECT * FROM clean WHERE Reviews > Downloads; 
+14. SELECT * FROM clean WHERE Type = 'Free' and Price > 0;
