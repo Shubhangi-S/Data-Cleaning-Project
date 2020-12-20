@@ -1,0 +1,718 @@
+[
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Application",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Application using expression value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Category",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Category using expression value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Type",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Type using expression value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Content Rating",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Content Rating using expression value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Genres",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Genres using expression value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Rating",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Rating using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Reviews",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Reviews using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Last Updated",
+    "expression": "value.toDate()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Last Updated using expression value.toDate()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Installs",
+    "expression": "value.replace(\"+\",\"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Installs using expression value.replace(\"+\",\"\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Installs",
+    "expression": "value.replace(\",\",\"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Installs using expression value.replace(\",\",\"\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Price",
+    "expression": "value.replace(\"$\",\"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Price using expression value.replace(\"$\",\"\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Application",
+    "expression": "value.replace(\"_\",\" \")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Application using expression value.replace(\"_\",\" \")"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Genres",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Entertainment",
+          "Entertainment;Music & Video",
+          "Entertainment;Brain Games",
+          "Entertainment;Action & Adventure",
+          "Entertainment;Creativity",
+          "Entertainment;Pretend Play",
+          "Entertainment;Education"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Entertainment"
+      },
+      {
+        "from": [
+          "Video Players & Editors",
+          "Video Players & Editors;Music & Video",
+          "Video Players & Editors;Creativity"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Video Players & Editors"
+      },
+      {
+        "from": [
+          "Educational;Pretend Play",
+          "Educational;Brain Games"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Educational"
+      },
+      {
+        "from": [
+          "Books & Reference;Education",
+          "Books & Reference;Creativity"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Books & Reference"
+      },
+      {
+        "from": [
+          "Role Playing;Pretend Play",
+          "Role Playing;Brain Games"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Role Playing"
+      }
+    ],
+    "description": "Mass edit cells in column Genres"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Genres",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Parenting",
+          "Parenting;Education",
+          "Parenting;Music & Video",
+          "Parenting;Brain Games"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Parenting"
+      },
+      {
+        "from": [
+          "Educational",
+          "Educational;Education",
+          "Educational;Creativity",
+          "Educational;Action & Adventure"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Educational"
+      },
+      {
+        "from": [
+          "Adventure",
+          "Adventure;Action & Adventure",
+          "Adventure;Brain Games",
+          "Adventure;Education"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Adventure"
+      },
+      {
+        "from": [
+          "Art & Design",
+          "Art & Design;Creativity",
+          "Art & Design;Action & Adventure",
+          "Art & Design;Pretend Play"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Art & Design"
+      },
+      {
+        "from": [
+          "Role Playing",
+          "Role Playing;Action & Adventure",
+          "Role Playing;Education"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Role Playing"
+      },
+      {
+        "from": [
+          "Health & Fitness",
+          "Health & Fitness;Action & Adventure",
+          "Health & Fitness;Education"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Health & Fitness"
+      },
+      {
+        "from": [
+          "Education;Pretend Play",
+          "Education;Brain Games"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Education"
+      },
+      {
+        "from": [
+          "Education;Creativity",
+          "Education;Action & Adventure"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Education"
+      },
+      {
+        "from": [
+          "Travel & Local",
+          "Travel & Local;Action & Adventure"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Travel & Local"
+      },
+      {
+        "from": [
+          "Communication",
+          "Communication;Creativity"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Communication"
+      }
+    ],
+    "description": "Mass edit cells in column Genres"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Genres",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Education",
+          "Educational",
+          "Education;Education"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Education"
+      },
+      {
+        "from": [
+          "Action;Action & Adventure",
+          "Simulation;Action & Adventure",
+          "Card;Action & Adventure"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Action & Adventure"
+      },
+      {
+        "from": [
+          "Board;Action & Adventure",
+          "Card;Action & Adventure"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Action & Adventure"
+      },
+      {
+        "from": [
+          "Action;Action & Adventure",
+          "Simulation;Action & Adventure"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Action & Adventure"
+      },
+      {
+        "from": [
+          "Educational",
+          "Education;Education"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Educational"
+      }
+    ],
+    "description": "Mass edit cells in column Genres"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Genres",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Education",
+          "Educational"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Education"
+      }
+    ],
+    "description": "Mass edit cells in column Genres"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Genres",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Arcade;Action & Adventure"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Arcade"
+      }
+    ],
+    "description": "Mass edit cells in column Genres"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Genres",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Arcade;Pretend Play"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Arcade"
+      }
+    ],
+    "description": "Mass edit cells in column Genres"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Genres",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Board;Brain Games"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Board"
+      }
+    ],
+    "description": "Mass edit cells in column Genres"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Genres",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Board;Pretend Play"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Board"
+      }
+    ],
+    "description": "Mass edit cells in column Genres"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Genres",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Action & Adventure",
+          "Racing;Action & Adventure",
+          "Casual;Action & Adventure",
+          "Sports;Action & Adventure",
+          "Puzzle;Action & Adventure",
+          "Strategy;Action & Adventure"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Action & Adventure"
+      },
+      {
+        "from": [
+          "Education",
+          "Simulation;Education",
+          "Puzzle;Education",
+          "Strategy;Education",
+          "Tools;Education",
+          "Trivia;Education"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Education"
+      },
+      {
+        "from": [
+          "Racing;Action & Adventure",
+          "Sports;Action & Adventure",
+          "Puzzle;Action & Adventure",
+          "Strategy;Action & Adventure"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Action & Adventure"
+      },
+      {
+        "from": [
+          "Racing;Action & Adventure",
+          "Casual;Action & Adventure",
+          "Sports;Action & Adventure",
+          "Puzzle;Action & Adventure"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Action & Adventure"
+      },
+      {
+        "from": [
+          "Racing;Action & Adventure",
+          "Sports;Action & Adventure",
+          "Strategy;Action & Adventure"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Action & Adventure"
+      },
+      {
+        "from": [
+          "Simulation",
+          "Simulation;Education"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Simulation"
+      },
+      {
+        "from": [
+          "Education",
+          "Casual;Education"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Education"
+      },
+      {
+        "from": [
+          "Music;Music & Video",
+          "Casual;Music & Video"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Music"
+      },
+      {
+        "from": [
+          "Music;Music & Video",
+          "Music & Audio;Music & Video"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Music"
+      }
+    ],
+    "description": "Mass edit cells in column Genres"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Genres",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Casual;Creativity",
+          "Puzzle;Creativity",
+          "Comics;Creativity",
+          "Strategy;Creativity"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Creativity"
+      },
+      {
+        "from": [
+          "Puzzle;Creativity",
+          "Comics;Creativity",
+          "Strategy;Creativity"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Creativity"
+      },
+      {
+        "from": [
+          "Casual;Pretend Play",
+          "Lifestyle;Pretend Play",
+          "Racing;Pretend Play"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Pretend Play"
+      },
+      {
+        "from": [
+          "Education",
+          "Education;Music & Video",
+          "Lifestyle;Education"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Education"
+      },
+      {
+        "from": [
+          "Strategy",
+          "Strategy;Creativity"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Strategy"
+      },
+      {
+        "from": [
+          "Puzzle;Brain Games",
+          "Casual;Brain Games"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Brain Games"
+      },
+      {
+        "from": [
+          "Lifestyle",
+          "Lifestyle;Education"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Lifestyle"
+      },
+      {
+        "from": [
+          "Comics",
+          "Comics;Creativity"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Comics"
+      }
+    ],
+    "description": "Mass edit cells in column Genres"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Genres",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Pretend Play",
+          "Simulation;Pretend Play"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Pretend Play"
+      },
+      {
+        "from": [
+          "Simulation",
+          "Simulation;Pretend Play"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Simulation"
+      }
+    ],
+    "description": "Mass edit cells in column Genres"
+  }
+]
